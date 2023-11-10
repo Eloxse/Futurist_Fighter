@@ -4,24 +4,31 @@ using UnityEngine;
 
 public class Player_Inputs : MonoBehaviour
 {
-    #region Variables
-    private Vector3 _movement = Vector3.zero;
+    #region Varibles
+    private static Player_Inputs _instance;
 
-    public Player_Inputs _instance;
+    private Vector3 _movement = Vector3.zero;
     #endregion
 
     #region Properties
+    public static Player_Inputs Instance => _instance;
     public Vector3 Movement => _movement;
     #endregion
 
     #region Builtin Methods
-    private void Awake()
+    void Awake()
     {
+        if (_instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        _instance = this;
+    }
 
-    }
-    private void Update()
+    void Update()
     {
-        _movement.Set(Input.GetAxis("Horizontal"), 0, 0);
+        _movement.Set(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
     }
-	#endregion
+    #endregion
 }
