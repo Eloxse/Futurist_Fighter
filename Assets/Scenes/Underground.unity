@@ -4145,7 +4145,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1e8f6d7da8e20c44dbc6494e7cf4696e,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.90816367
+      value: 0.9381749
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e8f6d7da8e20c44dbc6494e7cf4696e,
         type: 3}
@@ -4155,7 +4155,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1e8f6d7da8e20c44dbc6494e7cf4696e,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.41861537
+      value: 0.34616157
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e8f6d7da8e20c44dbc6494e7cf4696e,
         type: 3}
@@ -4170,7 +4170,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1e8f6d7da8e20c44dbc6494e7cf4696e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -49.494
+      value: 40.505
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e8f6d7da8e20c44dbc6494e7cf4696e,
         type: 3}
@@ -4187,6 +4187,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarilOpen_Lp
       objectReference: {fileID: 0}
+    - target: {fileID: 8958720379252108907, guid: 1e8f6d7da8e20c44dbc6494e7cf4696e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: db30fd668dd3d854f98b945b687e5a04, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5406,6 +5411,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -526942994084865806, guid: 872aec9aad20a6749bf39730b1036fe6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a1a14821f4e966a45beea099b1dedd3a, type: 2}
     - target: {fileID: 919132149155446097, guid: 872aec9aad20a6749bf39730b1036fe6,
         type: 3}
       propertyPath: m_Name
