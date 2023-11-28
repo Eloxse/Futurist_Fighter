@@ -1,0 +1,20 @@
+Load "Foot_Step_Water_Splashes.unity" for a test environment, then follow the following steps to add the water splashes to your character's feet:
+
+For an example character, first import the Character Standard Assets into your scene (from the top menu: Assets -> Import Package -> Characters). The Standard Assets can be found for free on the Unity Asset Store.
+
+Next you'll need to add Events to your character animation for the left and right feet on the frames that they make contact with the ground; select the animation file or the FBX that the animation is attached to (if using the Standard Assets, in the project window select Standard Assets -> Characters -> ThirdPersonCharacter -> Animation -> HumanoidRun), and then in the Inspector window go to the Animations tab. Above the animation preview at the bottom of the Inspector window, when you click to the right of the play triangle symbol you can scrub though the animation; scrub to the right (moving the thin red line) until the characters left foot strikes the ground. 
+
+Scroll up and expand out the "Events" section, clicking the add event button. A white line will be added to the Events timeline. Under Function add the field "LeftFootSplash". Repeat this process for the right foot, this time naming the Function field RightFootSplash. Click Apply to save these settings.
+
+Next you'll need to add the particle effect to you character mesh. Add the ThirdPersonController to the your scene; drag it from the Project window (in Standard Assets -> Characters -> ThirdPersonCharacter -> Prefabs -> ThirdPersonController) into the Hierarchy window. Check its Position and Rotation transforms are all at 0 (in the Inspector  window). In the hierarchy window, expand out the character's Skeleton nodes and attach the Prefab Foot_Splash_Left_Foot to the left foot and Foot_Splash_Right_Foot to the right foot. Move the two effects slightly left and right in the scene window so that they sit beneath each foot, just above the ground.
+
+Finally you need to add the Foot_Splash script to your character. Parent this to the top node (it's in the Scripts folder - simply drag it onto the character in the hierarchy window). You'll notice when you select the character, in the Inspector window the Foot_Splash script's 8 fields are blank as you need to link up the corresponding particle and audio files that you attached to the feet of your character. Drag each one from the hierarchy window into the script slots, making sure the names are the same.
+
+For best results, go to the Edit -> Project Settings -> Quality, and then turn off Soft Particles.
+
+Have fun!
+
+Thanks for purchasing this asset, please consider rating or writing a review about it. If you have any questions then please get in touch at bendurrant@rivermillstudios.com
+
+
+
