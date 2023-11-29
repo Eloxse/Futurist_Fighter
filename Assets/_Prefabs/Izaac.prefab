@@ -9,7 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1082965656746990004}
+  - component: {fileID: 5359030586190612369}
   - component: {fileID: 8888478356440282415}
+  - component: {fileID: 3903262731437509184}
+  - component: {fileID: 3348532283322719951}
   m_Layer: 0
   m_Name: Izaac
   m_TagString: Untagged
@@ -35,6 +38,32 @@ Transform:
   - {fileID: 7525556891026801074}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &5359030586190612369
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171589152343079671}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 1.98
+  m_Radius: 0.21
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.01
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!95 &8888478356440282415
 Animator:
   serializedVersion: 5
@@ -56,6 +85,33 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3903262731437509184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171589152343079671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1266d649c9697154f951925a4ecbd8bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 1
+  _inputs: {fileID: 0}
+--- !u!114 &3348532283322719951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171589152343079671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed7527d63adb6a44ba35b40e0d2df31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _instance: {fileID: 0}
 --- !u!1 &7265555554506849366
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,7 +292,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5b0deb8fe96a27f47872002650180a38, type: 2}
+      objectReference: {fileID: 2100000, guid: 0567932f5eb4dd34a86aea10740e88ad, type: 2}
     - target: {fileID: 919132149155446097, guid: f3c5eef2f6f032846ba89a8f6c9c8c5c,
         type: 3}
       propertyPath: m_Name
@@ -315,7 +371,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d1c40bccab90f404b84f32ac4d231ada, type: 2}
+      objectReference: {fileID: 2100000, guid: 958079f95634faa43899168b7ac373d4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9803e7b30465a0b4aa62ce62ef453982,
         type: 3}
       propertyPath: m_Name

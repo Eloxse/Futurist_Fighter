@@ -174,7 +174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &224053734
 Transform:
   m_ObjectHideFlags: 0
@@ -629,16 +629,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Izaac
       objectReference: {fileID: 0}
-    - target: {fileID: 2780035003920095218, guid: 3e121584389170c4a9cf7c108e7e411b,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0567932f5eb4dd34a86aea10740e88ad, type: 2}
-    - target: {fileID: 2922189135120286936, guid: 3e121584389170c4a9cf7c108e7e411b,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 958079f95634faa43899168b7ac373d4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -690,11 +680,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 143297224}
     m_Modifications:
-    - target: {fileID: 4261269096189068914, guid: 93c57adc93684f94b81680a045d794b3,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 622751383a5393d43b7d0b69a3532d77, type: 2}
     - target: {fileID: 5305520154835662763, guid: 93c57adc93684f94b81680a045d794b3,
         type: 3}
       propertyPath: m_LocalPosition.x

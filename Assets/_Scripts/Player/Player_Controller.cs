@@ -186,6 +186,6 @@ public class Player_Controller : MonoBehaviour
     {
         _weapon.SetActive(false);
     }*/
-    //Activer - désactiver une arme
+    //Activer - désactiver oui c'esune arme
     #endregion
 }

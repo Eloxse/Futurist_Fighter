@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Random_Idle : MonoBehaviour
 {
-    #region Variables
+    /*#region Variables
     [SerializeField] private float _minRandomTime = 1f;
     [SerializeField] private float _maxRandomTime = 2;
     [SerializeField] private int _idleNumber = 3;
@@ -29,5 +29,5 @@ public class Random_Idle : MonoBehaviour
         animator.SetInteger(_randomIdle, Random.Range(0, _idleNumber));
     }
     //Choisir aléatoirement un idle
-	#endregion
+	#endregion*/
 }
