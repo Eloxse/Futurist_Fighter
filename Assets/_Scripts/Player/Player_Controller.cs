@@ -5,48 +5,47 @@ using UnityEngine;
 public class Player_Controller : MonoBehaviour
 {
     #region Variables
-    public float _moveSpeed = 1f;
-    public float _turnSmoothSpeed = 1f;
-    public float _gravity = 6f;
-    public float distanceMaxLanding = 10f;
-    public GameObject staff;
-    public GameObject pistol;
+    [SerializeField] private float _moveSpeed = 1f;
+    [SerializeField] private float _turnSmoothSpeed = 1f;
+    [SerializeField] private float _jumpForce = 10f;
+    [SerializeField] private float _gravity = 6f;
+    [SerializeField] private float _distanceMaxLanding = 10f;
 
     private bool _canMove = true;
+    private bool _isBigLanding = false;
+    private float _distanceToGround;
     private float _verticalSpeed;
     private float _currentVelocity;
-    private Vector3 _movement = Vector3.zero;
 
-    private Vector3 _direction = Vector2.zero;
+    private Vector3 _movement = Vector3.zero;
+    private Vector3 _direction = Vector3.zero;
     private Vector3 _moveDirection = Vector3.zero;
 
     private CharacterController _characterController;
-
     private Camera _camera;
-
     private Player_Inputs _inputs;
+    private Animator _animator;
     #endregion
 
     #region Properties
     #endregion
 
     #region Builtin Methods
-    // Start is called before the first frame update
     void Start()
     {
-
         _inputs = Player_Inputs.Instance;
 
         _characterController = GetComponent<CharacterController>();
+        _animator = GetComponent<Animator>();
 
         _camera = Camera.main;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         Locomotion();
         CalculateVerticalMovement();
+        UpdateAnimations();
     }
     #endregion
 
@@ -76,19 +75,60 @@ public class Player_Controller : MonoBehaviour
 
         _movement = _moveDirection.normalized * _moveSpeed * Time.deltaTime;
     }
+    //Mouvements du personnage
 
     private void CalculateVerticalMovement()
     {
         if (_characterController.isGrounded)
         {
             _verticalSpeed = -_gravity * 0.3f;
+
+            if (_inputs.Jump && _canMove)
+            {
+                _verticalSpeed = _jumpForce;
+            }
+
+            _distanceToGround = 0;
         }
         else
         {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity, 1 << 6))
+            {
+                if (_distanceToGround < hit.distance)
+                {
+                    _distanceToGround = hit.distance;
+                }
+            }
+
+            if (_distanceToGround > _distanceMaxLanding)
+            {
+                _isBigLanding = true;
+            }
+            else
+            {
+                _isBigLanding = false;
+            }
+
             _verticalSpeed -= _gravity * Time.deltaTime;
         }
 
+        _movement += _verticalSpeed * Vector3.up;
         _characterController.Move(_movement);
+    }
+    //Fluidité des déplacements
+
+    private void CanMove(bool canMove)
+    {
+        if (canMove)
+        {
+            _canMove = true;
+        }
+        else
+        {
+            _canMove = false;
+            _moveDirection = Vector3.zero;
+        }
     }
     #endregion
 }
