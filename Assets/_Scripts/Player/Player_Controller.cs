@@ -11,6 +11,8 @@ public class Player_Controller : MonoBehaviour
     [SerializeField] private float _gravity = 6f;
     [SerializeField] private float _distanceMaxLanding = 10f;
 
+    [SerializeField] private GameObject _weapon;
+
     private bool _canMove = true;
     private bool _isBigLanding = false;
     private float _distanceToGround;
@@ -118,6 +120,34 @@ public class Player_Controller : MonoBehaviour
     }
     //Fluidité des déplacements
 
+    private void UpdateAnimations()
+    {
+        _animator.SetFloat("Velocity", _moveDirection.normalized.magnitude);
+
+        if (!_characterController.isGrounded)
+        {
+            _animator.SetBool("IsGrounded", false);
+            _animator.SetFloat("VerticalSpeed", _verticalSpeed);
+        }
+        else
+        {
+            _animator.SetBool("IsGrounded", true);
+            _animator.SetBool("IsBigLanding", _isBigLanding);
+            _animator.SetFloat("ComboTimer", Mathf.Repeat(_animator.GetCurrentAnimatorStateInfo(0).normalizedTime, 1));
+            // les animations sont de durée différentes, normalize toutes les anim et mettre une fourchette pour smooth
+
+            if (_inputs.Attack)
+            {
+                _animator.SetTrigger("Attack");
+            }
+            else
+            {
+                _animator.ResetTrigger("Attack");
+            }
+            //combo attack
+        }
+    }
+
     private void CanMove(bool canMove)
     {
         if (canMove)
@@ -130,5 +160,32 @@ public class Player_Controller : MonoBehaviour
             _moveDirection = Vector3.zero;
         }
     }
+    #endregion
+
+    #region Animation Events
+    public void Spawn()
+    {
+        CanMove(true);
+    }
+    public void StartBigLanding()
+    {
+        CanMove(false);
+    }
+
+    public void EndBigLanding()
+    {
+        CanMove(true);
+    }
+
+    /*public void MeleeAttackStart()
+    {
+        _weapon.SetActive(true);
+    }
+
+    public void MeleeAttackEnd()
+    {
+        _weapon.SetActive(false);
+    }*/
+    //Activer - désactiver une arme
     #endregion
 }

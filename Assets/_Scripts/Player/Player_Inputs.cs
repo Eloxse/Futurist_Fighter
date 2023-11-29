@@ -6,6 +6,7 @@ public class Player_Inputs : MonoBehaviour
 {
     #region Varibles
     private bool _jump = false;
+    private bool _attack = false;
 
     private static Player_Inputs _instance;
 
@@ -14,6 +15,7 @@ public class Player_Inputs : MonoBehaviour
 
     #region Properties
     public bool Jump => _jump;
+    public bool Attack => _attack;
     public static Player_Inputs Instance => _instance;
     public Vector3 Movement => _movement;
     #endregion
@@ -33,6 +35,7 @@ public class Player_Inputs : MonoBehaviour
     {
         _movement.Set(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
         _jump = Input.GetButton("Jump");
+        _attack = Input.GetButton("Fire1");
     }
     #endregion
 }
