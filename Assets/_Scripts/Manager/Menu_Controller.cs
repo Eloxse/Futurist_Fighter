@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Menu_Controller : MonoBehaviour
 {
+    #region Variables
     [SerializeField] private float _timeBeforeLoad = 0.3f;
 
     [SerializeField] private AudioSource _btnSound;
-
-    //Play button
+    #endregion
+    
+    #region Custom Methods
     public void LoadMapSelection(){
         StartCoroutine(DelayLoadMapSelection());
     }
@@ -21,7 +23,6 @@ public class Menu_Controller : MonoBehaviour
         SceneManager.LoadScene("Map_Selection", LoadSceneMode.Single);
     }
 
-    //Exit button
     public void ExitGame(){
         StartCoroutine(DelayExitGame());
     }
@@ -33,4 +34,27 @@ public class Menu_Controller : MonoBehaviour
         Debug.Log("Exit Game");
         Application.Quit();
     }
+
+    public void LoadMapSewers(){
+        StartCoroutine(DelayLoadMapSewers());
+    }
+
+    private IEnumerator DelayLoadMapSewers(){
+        _btnSound.Play();
+        Time.timeScale = 1f;
+        yield return new WaitForSeconds(_timeBeforeLoad);
+        SceneManager.LoadScene("Sewers", LoadSceneMode.Single);
+    }
+
+    public void LoadMapCity(){
+        StartCoroutine(DelayLoadMapCity());
+    }
+
+    private IEnumerator DelayLoadMapCity(){
+        _btnSound.Play();
+        Time.timeScale = 1f;
+        yield return new WaitForSeconds(_timeBeforeLoad);
+        SceneManager.LoadScene("City", LoadSceneMode.Single);
+    }
+    #endregion
 }

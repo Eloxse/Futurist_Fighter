@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player_Inputs : MonoBehaviour
 {
-    #region Varibles
+    #region Variables
     private bool _jump = false;
     private bool _attack = false;
 
