@@ -11,8 +11,6 @@ public class Player_Controller : MonoBehaviour
     [SerializeField] private float _gravity = 6f;
     [SerializeField] private float _distanceMaxLanding = 10f;
 
-    [SerializeField] private GameObject _weapon;
-
     private bool _canMove = true;
     private bool _isBigLanding = false;
     private float _distanceToGround;
@@ -176,16 +174,5 @@ public class Player_Controller : MonoBehaviour
     {
         CanMove(true);
     }
-
-    /*public void MeleeAttackStart()
-    {
-        _weapon.SetActive(true);
-    }
-
-    public void MeleeAttackEnd()
-    {
-        _weapon.SetActive(false);
-    }*/
-    //Activer - désactiver oui c'esune arme
     #endregion
 }

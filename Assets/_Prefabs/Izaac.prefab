@@ -61,7 +61,7 @@ CharacterController:
   m_Radius: 0.21
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.01
+  m_SkinWidth: 0.03
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!95 &8888478356440282415
@@ -97,8 +97,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1266d649c9697154f951925a4ecbd8bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 1
-  _inputs: {fileID: 0}
+  _moveSpeed: 4
+  _turnSmoothSpeed: 0.1
+  _jumpForce: 0.8
+  _gravity: 9.81
+  _distanceMaxLanding: 5
+  _weapon: {fileID: 0}
 --- !u!114 &3348532283322719951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,7 +115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed7527d63adb6a44ba35b40e0d2df31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _instance: {fileID: 0}
 --- !u!1 &7265555554506849366
 GameObject:
   m_ObjectHideFlags: 0
