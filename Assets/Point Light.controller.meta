@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: ff1358ffa46c9734e87cba6d1d1661b6
+=======
 guid: 94dc172221e53a44fa86f2bae5faa497
+>>>>>>> parent of bf7b7e6 (Chambre Ranger Partie 1)
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 9100000

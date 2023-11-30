@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Glass_Blue
+  m_Name: Verre
   m_Shader: {fileID: 4800000, guid: e88aeddd2ef1f934d805981244872e27, type: 3}
   m_Parent: {fileID: 2100000, guid: 9a6dc11bfdbd8b346a8d3d0407f1dd7d, type: 2}
   m_ModifiedSerializedProperties: 16
