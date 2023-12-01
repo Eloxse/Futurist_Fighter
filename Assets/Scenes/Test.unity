@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: cf0bdd84bc155d74f96fa5e4b1941cee,
+  m_LightingDataAsset: {fileID: 112000000, guid: 335c561605179ff44bdb8806fec504c7,
     type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: f724e8cf93cfc3948972b15c5897ee17,
     type: 2}
@@ -1377,6 +1377,40 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c1b573f1c44f2c488873bc33bd6aa5c, type: 3}
+--- !u!1 &214617050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 214617051}
+  m_Layer: 0
+  m_Name: Light_Holo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &214617051
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214617050}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1670043638}
+  - {fileID: 1870844848}
+  - {fileID: 1287348993}
+  m_Father: {fileID: 2029143845}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &220082000
 GameObject:
   m_ObjectHideFlags: 0
@@ -2668,7 +2702,7 @@ GameObject:
   - component: {fileID: 488845267}
   - component: {fileID: 488845266}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Holo_Biker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2682,13 +2716,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488845264}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.23390025, y: 0.69238985, z: -0.6332957, w: 0.2546048}
-  m_LocalPosition: {x: -7.077, y: -1.018, z: 9.562}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.2}
+  m_LocalRotation: {x: 0.22045556, y: 0.6588007, z: -0.6681682, w: 0.26633114}
+  m_LocalPosition: {x: -6.4170003, y: 1.7125787, z: -5.844002}
+  m_LocalScale: {x: 0.10000001, y: 0.1, z: 0.20000002}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1870844848}
-  m_Father: {fileID: 1412278482}
+  m_Children: []
+  m_Father: {fileID: 1402226591}
   m_LocalEulerAnglesHint: {x: 84.925, y: 140.463, z: 0.92}
 --- !u!64 &488845266
 MeshCollider:
@@ -6573,7 +6606,7 @@ GameObject:
   - component: {fileID: 1287348995}
   - component: {fileID: 1287348994}
   m_Layer: 0
-  m_Name: Point Light
+  m_Name: Light_Holo_Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6587,12 +6620,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287348992}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.02364923, y: 0.7267651, z: -0.6841999, w: -0.05589113}
+  m_LocalPosition: {x: 0.60699177, y: -27.00963, z: -8.16664}
+  m_LocalScale: {x: 0.100000046, y: 0.1, z: 0.100000046}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1632567385}
+  m_Father: {fileID: 214617051}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1287348994
 MonoBehaviour:
@@ -7334,6 +7367,7 @@ Transform:
   m_Children:
   - {fileID: 1632567385}
   - {fileID: 835662575}
+  - {fileID: 488845265}
   m_Father: {fileID: 875594507}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1403707098
@@ -7531,8 +7565,7 @@ Transform:
   m_LocalPosition: {x: 0.66, y: 1.74, z: -15.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 488845265}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -5.914, y: 0, z: 0}
 --- !u!114 &1412278483
@@ -8425,8 +8458,7 @@ Transform:
   m_LocalPosition: {x: 7.06, y: 1.06, z: -8.2}
   m_LocalScale: {x: 0.10000003, y: 0.1, z: 0.10000003}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 1287348993}
+  m_Children: []
   m_Father: {fileID: 1402226591}
   m_LocalEulerAnglesHint: {x: -265.672, y: 40.369003, z: 213.916}
 --- !u!95 &1632567386
@@ -8484,10 +8516,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.2678121, y: -0.62695307, z: -0.6899111, w: -0.24337074}
   m_LocalPosition: {x: -5.8291445, y: -23.962124, z: -0.19381952}
-  m_LocalScale: {x: 0.69999987, y: 0.69999987, z: 0.69999987}
+  m_LocalScale: {x: 0.69999987, y: 0.6999998, z: 0.6999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2041553295}
+  m_Father: {fileID: 214617051}
   m_LocalEulerAnglesHint: {x: -185.474, y: 0, z: 0}
 --- !u!114 &1670043639
 MonoBehaviour:
@@ -9620,7 +9652,7 @@ GameObject:
   - component: {fileID: 1870844850}
   - component: {fileID: 1870844849}
   m_Layer: 0
-  m_Name: Point Light
+  m_Name: Light_Holo_Biker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9634,12 +9666,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870844847}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.24, y: -0, z: 0.71}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.22045556, y: 0.6588007, z: -0.6681682, w: 0.26633114}
+  m_LocalPosition: {x: -12.960802, y: -26.504349, z: -5.9254255}
+  m_LocalScale: {x: 0.10000001, y: 0.099999994, z: 0.20000002}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 488845265}
+  m_Father: {fileID: 214617051}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1870844849
 MonoBehaviour:
@@ -10742,6 +10774,7 @@ Transform:
   - {fileID: 2041553295}
   - {fileID: 369299222}
   - {fileID: 2053218031}
+  - {fileID: 214617051}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2038980983
@@ -10932,7 +10965,6 @@ Transform:
   m_Children:
   - {fileID: 1361800988}
   - {fileID: 1704109668}
-  - {fileID: 1670043638}
   m_Father: {fileID: 2029143845}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2042551583
