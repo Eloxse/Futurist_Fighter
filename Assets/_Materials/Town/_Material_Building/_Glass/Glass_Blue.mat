@@ -28,8 +28,10 @@ Material:
   - _EMISSION
   - _HALFTONESHAPE_DOT
   - _NORMALMAP
+  - _OUTLINE
   m_InvalidKeywords:
   - _METALLICSPECGLOSSMAP
+  - _SPECULARHIGHLIGHTS_OFF
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0

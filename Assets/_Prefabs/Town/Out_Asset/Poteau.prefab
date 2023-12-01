@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3437591018178935184
 Transform:
@@ -99,6 +99,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Poteau
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 97c9a810a94a4244d8718328912d730c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -172,6 +177,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Boitier (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29e3e2a13fba96b4a854fdd4b2ace722,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -247,6 +257,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boitier (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29e3e2a13fba96b4a854fdd4b2ace722,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -321,6 +336,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boitier
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29e3e2a13fba96b4a854fdd4b2ace722,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -394,6 +414,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Boitier (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29e3e2a13fba96b4a854fdd4b2ace722,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
